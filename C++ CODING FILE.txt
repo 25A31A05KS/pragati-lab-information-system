@@ -1,0 +1,90 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+void displayLab(string floor, string room) {
+
+    // Ground Floor
+    if(floor == "ground" && room == "G-14") {
+        cout << "\nG-14 Lab Details:\n";
+        cout << "Systems: 72\nFans: 9\nLights: 14\nChairs: 75\nProjector: 1\nAC: 3\n";
+    }
+
+    // First Floor
+    else if(floor == "first" && room == "F22-1") {
+        cout << "\nDR Lab 1:\n";
+        cout << "Systems: 60\nFans: 12\nLights: 9\nProjector: 1\nChairs: 66\nAC: 2\n";
+    }
+    else if(floor == "first" && room == "F22-2") {
+        cout << "\nDR Lab 2:\n";
+        cout << "Systems: 60\nFans: 12\nLights: 9\nProjector: 1\nChairs: 66\nAC: 2\n";
+    }
+    else if(floor == "first" && room == "F-1-A") {
+        cout << "\nF-1-A Lab:\n";
+        cout << "Systems: 33\nFans: 12\nLights: 3\nAC: 2\nChairs: 33\n";
+    }
+    else if(floor == "first" && room == "F-1-B") {
+        cout << "\nF-1-B Lab:\n";
+        cout << "Systems: 33\nFans: 12\nLights: 3\nAC: 2\nChairs: 33\n";
+    }
+    else if(floor == "first" && room == "F2") {
+        cout << "\nCommon Computer Centre:\n";
+        cout << "Projector: 1\nChairs: 50\n";
+    }
+    else if(floor == "first" && room == "F-3") {
+        cout << "\nIT Computer Lab:\n";
+        cout << "Systems: 66\nFans: 8\nLights: 3\nAC: 4\nChairs: 66\n";
+    }
+    else if(floor == "first" && room == "F4") {
+        cout << "\nData Analysis Lab:\n";
+        cout << "Systems: 72\nFans: 17\nLights: 9\nAC: 3\nChairs: 75\nProjector: 1\n";
+    }
+    else if(floor == "first" && room == "F8B") {
+        cout << "\nData Engineering Lab:\n";
+        cout << "Systems: 72\nFans: 17\nLights: 9\nChairs: 75\nProjector: 1\nAC: 4\n";
+    }
+    else if(floor == "first" && room == "F9") {
+        cout << "\nKen Thompson Lab:\n";
+        cout << "Systems: 72\nFans: 17\nLights: 9\nChairs: 75\nProjector: 1\nAC: 3\n";
+    }
+    else if(floor == "first" && room == "F18-19") {
+        cout << "\nMarvin Minsky Lab:\n";
+        cout << "Systems: 72\nChairs: 75\nFans: 17\nAC: 4\nLights: 9\nProjector: 1\n";
+    }
+    else if(floor == "first" && room == "F-25") {
+        cout << "\nConference Hall:\n";
+        cout << "AC: 2\nChairs: 20\nTable: 1\nProjector: 1\nLights: 14\n";
+    }
+
+    // Third Floor
+    else if(floor == "third" && room == "T-3") {
+        cout << "\nIT WS Lab:\n";
+        cout << "Systems: 66\nChairs: 68\nFans: 6\nLights: 6\nAC: 1\nProjector: 1\n";
+    }
+    else if(floor == "third" && room == "T-2") {
+        cout << "\nEngineering Drawing Lab:\n";
+        cout << "Systems: 66\nFans: 6\nChairs: 68\nLights: 6\nProjector: 1\nAC: 2\n";
+    }
+    else if(floor == "third" && room == "T-1") {
+        cout << "\nEnglish Lab:\n";
+        cout << "Systems: 66\nChairs: 68\nFans: 6\nLights: 6\nProjector: 1\nAC: 2\n";
+    }
+
+    else {
+        cout << "\nInvalid Floor or Room!\n";
+    }
+}
+
+int main() {
+    string floor, room;
+
+    cout << "Enter Floor (ground / first / third): ";
+    cin >> floor;
+
+    cout << "Enter Room Number / Lab Code: ";
+    cin >> room;
+
+    displayLab(floor, room);
+
+    return 0;
+}
